@@ -21,42 +21,19 @@
         font-size: 80px;
         text-align: center;
       }
-      .puthia {
+      .time,
+      .date {
         font-family: PUTHIAfont, Arial, sans-serif;
         display: flex;
         justify-content: center;
         align-items: center;
       }
-      .date-time-h {
-        height: 897px;
-        width: 758px;
-      }
-      .date-time-v {
-        width: 897px;
-        height: 758px;
-        transform: rotate(90deg);
-        transform-origin: 0 100%;
-        margin-top: -758px;
-      }
-      .date {
-        height: 30%;
-      }
-      .time {
-        height: 70%;
-      }
     </style>
-    <script>
-      var horizontal = false;
-      function switchhh(div) {
-        horizontal = !horizontal;
-        div.className = horizontal ? "date-time-h" : "date-time-v";
-      }
-    </script>
   </head>
   <body>
-    <div class="date-time-v" onclick="switchhh(this)">
-      <div class="time puthia">08 : 31</div>
-      <div class="date puthia">2023 - 5 - 28</div>
+    <div>
+      <div class="time">08 : 31</div>
+      <div class="date">2023-05-28</div>
     </div>
   </body>
 </html>
