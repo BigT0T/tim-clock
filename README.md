@@ -1,2 +1,1 @@
-# kindle-clock
- 
+# tim-clock
