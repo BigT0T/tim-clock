@@ -73,13 +73,76 @@
   <body>
     <div class="clock-box">
       <div class="line"></div>
-      <div class="time">08:31</div>
+      <div id="time" class="time">88:88</div>
       <div class="date-box">
-        <div class="day">Wed</div>
-        <div class="month">Jun</div>
-        <div class="date">27</div>
+        <div id="day" class="day">888</div>
+        <div id="month" class="month">888</div>
+        <div id="date" class="date">88</div>
       </div>
       <div class="month-date-line"></div>
     </div>
+    <script>
+      var timeEle = document.getElementById("time");
+      var dayEle = document.getElementById("day");
+      var monthEle = document.getElementById("month");
+      var dateEle = document.getElementById("date");
+
+      function getDate() {
+        var currTime = new Date();
+        var time = currTime.getTime();
+        var offset = currTime.getTimezoneOffset() * 60000;
+        var utcTime = time + offset;
+
+        return new Date(utcTime + 3600000 * 8);
+      }
+
+      function initDay(d) {
+        dayEle.innerText = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][
+          d.getDay()
+        ];
+        monthEle.innerText = [
+          "Jan",
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "Jun",
+          "Jul",
+          "Aug",
+          "Sep",
+          "Oct",
+          "Nov",
+          "Dec",
+        ][d.getMonth()];
+        dateEle.innerText = d.getDate();
+      }
+      function initTime(d) {
+        var h = d.getHours();
+        var m = d.getMinutes();
+        h = h < 10 ? "0" + h : h;
+        m = m < 10 ? "0" + m : m;
+
+        timeEle.innerText = h + ":" + m;
+      }
+      var date = getDate();
+      var day = date.getDay();
+      initTime(date);
+      initDay(date);
+
+      setInterval(function () {
+        var newDate = getDate();
+        var newDay = newDate.getDay();
+
+        if (date !== newDate) {
+          date = newDate;
+          initTime(newDate);
+        }
+
+        if (day !== newDay) {
+          day = newDay;
+          initDay(newDate);
+        }
+      }, 10000);
+    </script>
   </body>
 </html>
