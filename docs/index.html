@@ -36,41 +36,37 @@
         font-size: 150px;
       }
       .line {
-        display: inline-block;
         height: 250px;
         width: 25px;
         background-color: black;
       }
       .clock-box {
-        padding: 50px;
-        display: flex;
-        -webkit-display: flex;
-        flex-direction: column;
-        -webkit-flex-direction: column;
+        padding: 50px 70px;
       }
       .date-box {
-        display: flex;
-        -webkit-display: flex;
         font-weight: 700;
-        margin: 25px 0;
-        align-items: center;
+        margin: 25px;
+        text-align: start;
+        font-size: 0;
       }
       .date-box .day,
-      .date-box .month {
-        flex: 2;
-        -webkit-flex: 2;
+      .date-box .month,
+      .date-box .date {
+        height: 295px;
+        font-size: 100px;
+        display: inline-block;
+        text-align: center;
       }
       .date-box .date {
-        flex: 1;
-        -webkit-flex: 1;
+        height: 150px;
       }
       .month-date-line {
         width: 50px;
-        height: 220px;
+        height: 195px;
         border: 25px solid black;
         border-right: 0;
         margin-top: auto;
-        margin-bottom: 100px;
+        margin-bottom: 95px;
       }
     </style>
   </head>
