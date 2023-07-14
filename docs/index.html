@@ -24,8 +24,10 @@
         -webkit-writing-mode: vertical-rl;
         -ms-writing-mode: vertical-rl;
       }
-      .time {
+      .puth-font {
         font-family: PUTHIAfont, Arial, sans-serif;
+      }
+      .time {
         font-size: 200px;
         margin: 0 50px;
         width: 100%;
@@ -41,7 +43,7 @@
         background-color: black;
       }
       .clock-box {
-        padding: 50px 70px;
+        padding: 50px 40px;
       }
       .date-box {
         font-weight: 700;
@@ -65,27 +67,66 @@
         height: 195px;
         border: 25px solid black;
         border-right: 0;
-        margin-top: auto;
-        margin-bottom: 95px;
+      }
+      .weather-box {
+        font-size: 100px;
+        text-align: center;
+      }
+      .weather-box > * {
+        display: inline-block;
       }
     </style>
   </head>
   <body>
     <div class="clock-box">
       <div class="line"></div>
-      <div id="time" class="time">88:88</div>
+      <div id="time" class="time puth-font">88:88</div>
       <div class="date-box">
         <div id="day" class="day">888</div>
         <div id="month" class="month">888</div>
         <div id="date" class="date">88</div>
       </div>
-      <div class="month-date-line"></div>
+      <div class="weather-box">
+        <svg
+          class="icon"
+          style="width: 1em; height: 1em; fill: currentColor; overflow: hidden"
+          viewBox="0 0 1024 1024"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          p-id="1997"
+        >
+          <path
+            transform="matrix(6.123233995736766e-17,1,-1,6.123233995736766e-17,1024.4663766542342,-0.46637665423429553)"
+            d="M679.68 266.24h104.789333a20.736 20.736 0 0 0 20.906667-20.48c0-11.306667-9.386667-20.48-20.906667-20.48h-104.832a20.736 20.736 0 0 0-20.906666 20.48c0 11.306667 9.386667 20.48 20.906666 20.48z m0-122.88h167.68a20.736 20.736 0 0 0 20.906667-20.48c0-11.306667-9.386667-20.48-20.906667-20.48h-167.68a20.736 20.736 0 0 0-20.992 20.48c0 11.306667 9.386667 20.48 20.949333 20.48z m227.712 194.56a21.034667 21.034667 0 0 0-18.133333-10.24h-209.621334a21.034667 21.034667 0 0 0-18.133333 10.24 20.096 20.096 0 0 0 0 20.48c3.754667 6.357333 10.666667 10.24 18.133333 10.24h209.621334a21.034667 21.034667 0 0 0 18.133333-10.24 20.053333 20.053333 0 0 0 0-20.48z m-311.552 179.882667V194.56c0-107.434667-89.173333-194.56-199.125333-194.56S197.632 87.125333 197.632 194.56v342.186667a282.368 282.368 0 0 0-83.84 200.533333c0 76.032 30.890667 148.992 85.930667 202.752S329.386667 1024 407.210667 1024c123.264-0.085333 233.344-75.434667 275.498666-188.586667 42.197333-113.237333 7.466667-240.085333-86.869333-317.610666z m33.962667 277.717333c-25.728 94.08-110.421333 161.365333-209.92 166.826667-99.498667 5.376-191.317333-52.266667-227.584-143.018667-36.266667-90.709333-8.746667-193.92 68.181333-255.829333V194.56c0-73.514667 61.013333-133.12 136.234667-133.12s136.234667 59.605333 136.234666 133.12v354.133333c83.498667 53.12 122.581333 152.746667 96.853334 246.826667z m-158.805334-186.88v-218.88c0-34.133333-28.586667-62.08-63.573333-62.08-34.901333 0-63.488 27.946667-63.488 62.08v221.44c-61.44 30.250667-93.312 98.048-76.714667 163.285333 16.64 65.28 77.226667 110.592 146.005334 109.226667 68.821333-1.408 127.445333-49.152 141.269333-114.986667 13.866667-65.877333-20.821333-132.352-83.498667-160.085333z m376.32-158.08h-167.68a21.034667 21.034667 0 0 0-19.328 12.672 20.181333 20.181333 0 0 0 4.522667 22.314667c3.925333 3.84 9.258667 5.973333 14.805333 5.973333h167.68a21.034667 21.034667 0 0 0 18.176-10.24 20.053333 20.053333 0 0 0 0-20.48 21.034667 21.034667 0 0 0-18.176-10.24z"
+            p-id="1998"
+          ></path>
+        </svg>
+        <div id="temp" class="puth-font temp"></div>
+        <div class="puth-font split">-</div>
+        <svg
+          class="icon"
+          style="width: 1em; height: 1em; fill: currentColor; overflow: hidden"
+          viewBox="0 0 1024 1024"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          p-id="3966"
+        >
+          <path
+            transform="rotate(90,505.5,522.3)"
+            d="M325.290667 299.008L235.178667 121.173333a34.133333 34.133333 0 0 0-61.098667 0L84.309333 299.008a151.210667 151.210667 0 0 0 27.306667 174.08 131.072 131.072 0 0 0 186.368 0 151.893333 151.893333 0 0 0 27.306667-174.08z m-75.434667 125.610667a62.805333 62.805333 0 0 1-90.453333 0 83.285333 83.285333 0 0 1-14.336-94.549334L204.8 212.309333l59.392 117.76a82.602667 82.602667 0 0 1-14.336 94.549334zM955.733333 238.933333V170.666667h-68.266666V68.266667h-68.266667v887.466666h136.533333v-68.266666h-68.266666v-170.666667h68.266666v-68.266667h-68.266666v-170.666666h68.266666v-68.266667h-68.266666V238.933333z m-413.696 18.090667a34.133333 34.133333 0 0 0-60.416 0l-179.882666 337.92a247.125333 247.125333 0 0 0 48.128 296.277333 236.885333 236.885333 0 0 0 323.584 0 247.125333 247.125333 0 0 0 48.128-296.277333z m84.992 584.362667a166.570667 166.570667 0 0 1-230.058666 0 179.2 179.2 0 0 1-34.133334-214.357334L512 345.770667l149.504 281.258666a178.517333 178.517333 0 0 1-34.474667 214.357334z"
+            p-id="3967"
+          ></path>
+        </svg>
+        <div id="rain" class="puth-font rain"></div>
+      </div>
     </div>
     <script>
       var timeEle = document.getElementById("time");
       var dayEle = document.getElementById("day");
       var monthEle = document.getElementById("month");
       var dateEle = document.getElementById("date");
+      var tempEle = document.getElementById("temp");
+      var rainEle = document.getElementById("rain");
 
       function getDate() {
         var currTime = new Date();
@@ -124,14 +165,36 @@
 
         timeEle.innerText = h + ":" + m;
       }
+      function initWeather() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            var wd = JSON.parse(this.responseText).data.real.weather;
+            var temp = wd.temperature;
+            var rain = wd.rain;
+            tempEle.innerText = temp;
+            rainEle.innerText = rain;
+          }
+        };
+        xhttp.open(
+          "GET",
+          "http://www.nmc.cn/rest/weather?stationid=58457",
+          true
+        );
+        xhttp.send();
+      }
+
       var date = getDate();
       var day = date.getDay();
+      var hour = date.getHours();
       initTime(date);
       initDay(date);
+      initWeather();
 
       setInterval(function () {
         var newDate = getDate();
         var newDay = newDate.getDay();
+        var newHour = newDate.getHours();
 
         if (date !== newDate) {
           date = newDate;
@@ -141,6 +204,11 @@
         if (day !== newDay) {
           day = newDay;
           initDay(newDate);
+        }
+
+        if (hour !== newHour) {
+          hour = newHour;
+          initWeather();
         }
       }, 10000);
     </script>
