@@ -171,7 +171,7 @@
           if (this.readyState == 4 && this.status == 200) {
             var wd = JSON.parse(this.responseText).data.real.weather;
             var temp = wd.temperature;
-            var rain = wd.rain;
+            var rain = wd.humidity;
             tempEle.innerText = temp;
             rainEle.innerText = rain;
           }
